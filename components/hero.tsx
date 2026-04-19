@@ -114,7 +114,7 @@ export default function Hero() {
                 <svg className="w-3 h-3 text-success shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
                 </svg>
-                veralevel.in
+                vera-level-digital.vercel.app
               </div>
             </div>
 
@@ -153,15 +153,6 @@ export default function Hero() {
                     ))}
                   </div>
                 </div>
-                {/* Mini right column */}
-                <div className="w-[72px] shrink-0">
-                  <div className="rounded-lg overflow-hidden border border-outline bg-surface-variant aspect-square flex items-center justify-center">
-                    <div className="text-center p-1">
-                      <div className="text-[18px] font-black text-success leading-none">99+</div>
-                      <div className="text-[5.5px] text-on-surface-variant uppercase tracking-wider font-semibold">PageSpeed</div>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Mock services strip */}
@@ -185,7 +176,7 @@ export default function Hero() {
               <div className="flex border-t border-outline">
                 {[
                   { val:"< 1s",  label:"Load Time",      bg:"bg-primary/5"  },
-                  { val:"99+",   label:"Lighthouse",     bg:"bg-success/5"  },
+                  { val:"100%",  label:"Lighthouse",     bg:"bg-success/5"  },
                   { val:"100%",  label:"Custom Built",   bg:"bg-gold/5"     },
                 ].map(s => (
                   <div key={s.label} className={`flex-1 ${s.bg} px-3 py-2 text-center border-r last:border-r-0 border-outline`}>
@@ -197,19 +188,6 @@ export default function Hero() {
 
             </div>
           </div>
-
-          {/* Floating PageSpeed badge */}
-          <motion.div
-            variants={scaleIn}
-            initial="hidden"
-            animate="visible"
-            className="absolute -bottom-4 -left-4 glass bg-surface/95 border border-outline px-4 py-3 rounded-xl shadow-xl"
-          >
-            <div className="font-headline text-3xl font-bold text-success">99+</div>
-            <div className="text-[10px] font-semibold text-on-surface-variant uppercase tracking-widest mt-0.5">
-              PageSpeed
-            </div>
-          </motion.div>
 
           {/* Floating mobile badge */}
           <motion.div
