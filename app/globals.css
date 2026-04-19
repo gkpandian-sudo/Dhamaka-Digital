@@ -84,6 +84,24 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.75;
 }
 
+/* ── Hindi / Devanagari text — apply Noto Sans Devanagari ───────────── */
+:root[lang="hi"] body,
+:root[lang="hi"] .font-sans {
+  font-family: var(--font-devanagari), var(--font-inter), system-ui, sans-serif;
+}
+:root[lang="hi"] h1,
+:root[lang="hi"] h2,
+:root[lang="hi"] h3,
+:root[lang="hi"] h4,
+:root[lang="hi"] h5,
+:root[lang="hi"] h6 {
+  font-family: var(--font-devanagari), var(--font-space-grotesk), system-ui, sans-serif;
+}
+.devanagari-text {
+  font-family: var(--font-devanagari), var(--font-inter), system-ui, sans-serif;
+  line-height: 1.8;
+}
+
 /* ── Custom scrollbar (dark mode) ───────────────────────────────────── */
 .dark ::-webkit-scrollbar         { width: 6px; }
 .dark ::-webkit-scrollbar-track   { background: rgb(var(--color-surface)); }

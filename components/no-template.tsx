@@ -2,8 +2,12 @@
 
 import { motion } from "framer-motion"
 import { fadeInUp, staggerContainer, inView } from "@/lib/motion"
+import { useLang } from "@/lib/i18n"
 
 export default function NoTemplate() {
+  const { t } = useLang()
+  const n = t.noTemplate
+
   return (
     <section className="py-12 border-y border-outline bg-surface-variant/30">
       <motion.div
@@ -15,22 +19,21 @@ export default function NoTemplate() {
           variants={fadeInUp}
           className="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-4 block"
         >
-          What Sets Us Apart
+          {n.eyebrow}
         </motion.span>
 
         <motion.h2
           variants={fadeInUp}
-          className="font-headline text-3xl font-bold mb-4 tamil-text"
+          className="font-headline text-3xl font-bold mb-4"
         >
-          நாங்கள் உருவாக்குவது{" "}
+          {n.headline}{" "}
           <span className="px-2 py-1 bg-on-surface text-surface">
-            பூஜ்யம் டெம்ப்ளேட்.
+            {n.headlineAccent}
           </span>
         </motion.h2>
 
-        <motion.p variants={fadeInUp} className="text-on-surface-variant max-w-2xl mx-auto text-sm tamil-text">
-          நாங்கள் React.js மற்றும் Next.js கொண்டு புதிதாக குறியீடு செய்கிறோம்.
-          WordPress போன்ற பழைய முறைகள் அல்ல.
+        <motion.p variants={fadeInUp} className="text-on-surface-variant max-w-2xl mx-auto text-sm">
+          {n.sub}
         </motion.p>
       </motion.div>
     </section>

@@ -3,24 +3,12 @@
 import { motion } from "framer-motion"
 import { X, Check } from "lucide-react"
 import { fadeInLeft, fadeInRight, fadeInUp, staggerContainer, inView } from "@/lib/motion"
-
-const wordpress = [
-  "மெதுவான லோடிங் வேகம் (3-7s)",
-  "Hacking மற்றும் plugin அபாயங்கள்",
-  "மாதாந்திர அப்டேட்கள் மற்றும் பராமரிப்பு",
-  "வரையறுக்கப்பட்ட வடிவமைப்பு சுதந்திரம்",
-  "மாதாந்திர hosting & plugin கட்டணங்கள்",
-]
-
-const nextjs = [
-  "அதிவேக செயல்திறன் (< 1s)",
-  "அதிகபட்ச பாதுகாப்பு (Static Generation)",
-  "பூஜ்ய பராமரிப்பு செலவுகள்",
-  "முழுமையான பிரத்தியேக வடிவமைப்பு",
-  "ஒரு முறை மட்டும் கட்டணம்",
-]
+import { useLang } from "@/lib/i18n"
 
 export default function Compare() {
+  const { t } = useLang()
+  const c = t.compare
+
   return (
     <section id="compare" className="py-24 bg-surface-variant/20 px-6 border-y border-outline">
       <div className="max-w-4xl mx-auto">
@@ -31,7 +19,7 @@ export default function Compare() {
           variants={fadeInUp}
           className="font-headline text-3xl font-bold text-center mb-12"
         >
-          WordPress vs Modern Tech Stack
+          {c.headline}
         </motion.h2>
 
         {/* Two columns */}
@@ -46,8 +34,8 @@ export default function Compare() {
               <span>🚫</span> WordPress / CMS
             </h3>
             <ul className="space-y-4">
-              {wordpress.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-on-surface-variant tamil-text">
+              {c.wordpress.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-on-surface-variant">
                   <X size={14} className="text-red-500 mt-0.5 shrink-0" />
                   {item}
                 </li>
@@ -61,8 +49,8 @@ export default function Compare() {
               <Check size={16} /> Next.js / React
             </h3>
             <ul className="space-y-4">
-              {nextjs.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm tamil-text">
+              {c.nextjs.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm">
                   <Check size={14} className="text-success mt-0.5 shrink-0" />
                   {item}
                 </li>

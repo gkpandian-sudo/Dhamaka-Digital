@@ -3,70 +3,12 @@
 import { motion } from "framer-motion"
 import { Check } from "lucide-react"
 import { fadeInUp, scaleIn, staggerContainer, inView, EASE } from "@/lib/motion"
-
-type Tier = {
-  name:     string
-  price:    string
-  timeline: string
-  features: string[]
-  cta:      string
-  waMsg:    string
-  popular?: boolean
-}
-
-const tiers: Tier[] = [
-  {
-    name:     "Starter",
-    price:    "₹10,000 - 15,000",
-    timeline: "Ready in 5-7 Days",
-    features: [
-      "1 Landing Page",
-      "WhatsApp CTA button",
-      "Google Maps இணைப்பு",
-      "Mobile-responsive",
-      "Basic SEO",
-      "Vercel hosting",
-      "1 revision",
-    ],
-    cta:   "Choose Plan",
-    waMsg: "Hello%2C%20I%27m%20interested%20in%20the%20Starter%20package.",
-  },
-  {
-    name:     "Standard",
-    price:    "₹25,000 - 40,000",
-    timeline: "Ready in 10-14 Days",
-    features: [
-      "3-5 Pages",
-      "Photo / Video Gallery",
-      "Services & Pricing page",
-      "WhatsApp integration",
-      "Full SEO",
-      "Google Analytics",
-      "3 revisions",
-    ],
-    cta:     "Start Now",
-    waMsg:   "Hello%2C%20I%27m%20interested%20in%20the%20Standard%20package.",
-    popular: true,
-  },
-  {
-    name:     "Custom",
-    price:    "₹60,000+",
-    timeline: "Ready in 14-30 Days",
-    features: [
-      "Multi-page & Dashboard",
-      "Booking system",
-      "Admin dashboard",
-      "Database integration",
-      "WhatsApp bot",
-      "Unlimited revisions",
-      "1 month support",
-    ],
-    cta:   "Get a Quote",
-    waMsg: "Hello%2C%20I%27d%20like%20to%20discuss%20a%20custom%20project.",
-  },
-]
+import { useLang } from "@/lib/i18n"
 
 export default function Pricing() {
+  const { t } = useLang()
+  const p = t.pricing
+
   return (
     <section id="pricing" className="py-24 bg-surface-variant/10 px-6 border-t border-outline">
       <div className="max-w-7xl mx-auto">
@@ -74,11 +16,11 @@ export default function Pricing() {
         {/* Header */}
         <motion.div {...inView} variants={staggerContainer} className="text-center mb-16">
           <motion.h2 variants={fadeInUp} className="font-headline text-4xl font-bold mb-4">
-            Transparent{" "}
-            <span className="bg-primary px-2 text-white">Pricing</span>
+            {p.headline}{" "}
+            <span className="bg-primary px-2 text-white">{p.headlineAccent}</span>
           </motion.h2>
           <motion.p variants={fadeInUp} className="text-on-surface-variant">
-            No hidden fees. One-time payment only.
+            {p.sub}
           </motion.p>
         </motion.div>
 
@@ -88,7 +30,7 @@ export default function Pricing() {
           variants={staggerContainer}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch"
         >
-          {tiers.map((tier) => (
+          {p.tiers.map((tier) => (
             <motion.div
               key={tier.name}
               variants={tier.popular ? scaleIn : fadeInUp}
@@ -113,11 +55,11 @@ export default function Pricing() {
 
               <h3 className="font-headline text-xl font-bold mb-2">{tier.name}</h3>
               <div className="font-headline text-3xl font-bold mb-1">{tier.price}</div>
-              <div className="text-xs text-on-surface-variant mb-6 tamil-text">{tier.timeline}</div>
+              <div className="text-xs text-on-surface-variant mb-6">{tier.timeline}</div>
 
               <ul className="space-y-3 mb-8 flex-grow">
                 {tier.features.map((f) => (
-                  <li key={f} className="flex items-center gap-3 text-sm tamil-text">
+                  <li key={f} className="flex items-center gap-3 text-sm">
                     <Check size={15} className="text-primary shrink-0" />
                     <span className={tier.popular ? "" : "text-on-surface-variant"}>{f}</span>
                   </li>
@@ -148,7 +90,7 @@ export default function Pricing() {
           variants={fadeInUp}
           className="text-center text-[10px] text-on-surface-variant mt-10 uppercase tracking-widest"
         >
-          Prices may vary by project scope. One-time payment only.
+          {p.footnote}
         </motion.p>
 
       </div>
