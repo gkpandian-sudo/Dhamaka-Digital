@@ -31,12 +31,12 @@ const cormorant = Cormorant_Garamond({
 
 // ── Page metadata ─────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title:       "Vera Level Digital — High-Performance Web Solutions",
+  title:       "Vera Level Digital — Web Solutions for Namma Chennai Businesses",
   description: "Tamil businesses கோஸ்கான அதிவேக, custom Next.js இணையதளங்கள். ₹10,000 முதல் தொடங்குகிறது.",
-  keywords:    ["web development", "Next.js", "Tamil Nadu", "business website", "Vera Level Digital"],
+  keywords:    ["web development", "Next.js", "Tamil Nadu", "Chennai", "business website", "Vera Level Digital"],
   openGraph: {
     title:       "Vera Level Digital",
-    description: "High-Performance Web Solutions for Tamil Businesses",
+    description: "Vera Level Web Solutions for Namma Chennai Businesses",
     type:        "website",
   },
 }
