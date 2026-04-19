@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { motion } from "framer-motion"
 import { Sun, Moon, Menu, X } from "lucide-react"
 import { useState } from "react"
@@ -38,20 +37,11 @@ export default function Nav() {
           transition={{ duration: 0.2, ease: EASE }}
           className="flex-shrink-0"
         >
-          <div className="
-            px-2 py-1 rounded-xl transition-all duration-200
-            mix-blend-multiply
-            dark:mix-blend-normal dark:bg-white/95 dark:px-3 dark:py-1.5 dark:shadow-sm
-          ">
-            <Image
-              src="/logo.png"
-              alt="Vera Level Digital"
-              width={180}
-              height={54}
-              className="h-11 w-auto object-contain"
-              priority
-            />
-          </div>
+          <span className="font-headline text-2xl font-bold tracking-tight">
+            <span className="text-primary">V</span>
+            <span className="text-on-surface">L</span>
+            <span className="text-[#f97316]">D</span>
+          </span>
         </motion.a>
 
         {/* Desktop links */}
