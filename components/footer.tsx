@@ -74,6 +74,12 @@ export default function Footer() {
                 💬 +91 96322 33776
               </a>
               <a
+                href="mailto:hello@dhamakadigital.in"
+                className="flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors"
+              >
+                ✉️ hello@dhamakadigital.in
+              </a>
+              <a
                 href="https://github.com/gkpandian-sudo"
                 target="_blank"
                 rel="noopener noreferrer"

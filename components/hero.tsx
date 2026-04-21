@@ -5,7 +5,7 @@ import { heroContainer, fadeInRight, fadeInUp, scaleIn, EASE } from "@/lib/motio
 import { useLang } from "@/lib/i18n"
 
 const WA_LINK =
-  "https://wa.me/919632233776?text=Hello%2C%20I%27d%20like%20a%20free%20consultation%20for%20my%20website."
+  "https://wa.me/919632233776?text=Hello%2C%20I%27d%20like%20a%20free%20mock%20of%20my%20homepage.%20My%20business%20name%20is%3A"
 
 export default function Hero() {
   const { t } = useLang()
@@ -108,7 +108,7 @@ export default function Hero() {
                 <svg className="w-3 h-3 text-success shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
                 </svg>
-                vera-level-digital.vercel.app
+                dhamakadigital.in
               </div>
             </div>
 
@@ -117,7 +117,7 @@ export default function Hero() {
 
               {/* Mock nav */}
               <div className="flex items-center justify-between px-4 py-2.5 border-b border-outline">
-                <span className="text-[9px] font-black text-primary tracking-tight">VERA LEVEL</span>
+                <span className="text-[9px] font-black text-primary tracking-tight">DHAMAKA</span>
                 <div className="flex items-center gap-3">
                   {h.mockNav.map(l => (
                     <span key={l} className="text-[7px] text-on-surface-variant font-medium">{l}</span>
