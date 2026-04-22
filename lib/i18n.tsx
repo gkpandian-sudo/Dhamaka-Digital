@@ -125,7 +125,7 @@ interface PortfolioT {
   eyebrow: string
   headline: string
   viewGithub: string
-  projects: { icon: string; color: string; title: string; desc: string; tags: string[]; segment: string; href: string }[]
+  projects: { icon: string; color: string; title: string; desc: string; tags: string[]; segment: string; href: string; linkLabel?: string }[]
 }
 
 // ── FAQ ───────────────────────────────────────────────────────────────
@@ -310,6 +310,7 @@ const ta: Translations = {
       { icon: "🎨", color: "bg-primary/10 border-primary/20",   title: "Krima Arts",    desc: "ஒரு கலை வணிகத்திற்காக உருவாக்கப்பட்ட creative arts showcase இணையதளம்.", tags: ["HTML", "CSS"], segment: "Creative / Arts", href: "https://github.com/gkpandian-sudo/krima_arts" },
       { icon: "📧", color: "bg-success/10 border-success/20",   title: "Gmail Cleanup", desc: "Gmail-ல் உள்ள அனைத்து unread threads-ஐயும் bulk-ஆக read ஆக mark செய்யும் Google Apps Script.", tags: ["JavaScript", "Google Apps Script"], segment: "Automation / Productivity", href: "https://github.com/gkpandian-sudo/gmail-cleanup-" },
       { icon: "👤", color: "bg-[#F59E0B]/10 border-[#F59E0B]/20", title: "Pandian",    desc: "தனிப்பட்ட portfolio மற்றும் profile showcase — personal branding project.", tags: ["HTML", "Personal Project"], segment: "Portfolio", href: "https://github.com/gkpandian-sudo/pandian" },
+      { icon: "🍽️", color: "bg-[#f5921e]/10 border-[#f5921e]/20", title: "Murugan Mess", desc: "சென்னை heritage உணவகம் — Zomato/Swiggy commission இல்லாமல் direct online ordering. Banana leaf experience, digital-ஆக.", tags: ["HTML/CSS", "JavaScript", "Live Demo"], segment: "Food & Restaurant", href: "https://murugan-mess.netlify.app/menu", linkLabel: "Live Site →" },
     ],
   },
   faq: {
@@ -481,6 +482,7 @@ const hi: Translations = {
       { icon: "🎨", color: "bg-primary/10 border-primary/20",   title: "Krima Arts",    desc: "एक art business के लिए बनाया गया creative arts showcase website।", tags: ["HTML", "CSS"], segment: "Creative / Arts", href: "https://github.com/gkpandian-sudo/krima_arts" },
       { icon: "📧", color: "bg-success/10 border-success/20",   title: "Gmail Cleanup", desc: "Gmail के सभी unread threads को bulk read mark करने वाला Google Apps Script।", tags: ["JavaScript", "Google Apps Script"], segment: "Automation / Productivity", href: "https://github.com/gkpandian-sudo/gmail-cleanup-" },
       { icon: "👤", color: "bg-[#F59E0B]/10 border-[#F59E0B]/20", title: "Pandian",    desc: "Personal portfolio और profile showcase — personal branding project।", tags: ["HTML", "Personal Project"], segment: "Portfolio", href: "https://github.com/gkpandian-sudo/pandian" },
+      { icon: "🍽️", color: "bg-[#f5921e]/10 border-[#f5921e]/20", title: "Murugan Mess", desc: "चेन्नई की विरासत मेस — Zomato/Swiggy commission के बिना सीधे online ordering। Banana leaf experience, digital अवतार में।", tags: ["HTML/CSS", "JavaScript", "Live Demo"], segment: "Food & Restaurant", href: "https://murugan-mess.netlify.app/menu", linkLabel: "Live Site →" },
     ],
   },
   faq: {
@@ -652,6 +654,7 @@ const en: Translations = {
       { icon: "🎨", color: "bg-primary/10 border-primary/20",   title: "Krima Arts",    desc: "A creative arts showcase website built for an art business.", tags: ["HTML", "CSS"], segment: "Creative / Arts", href: "https://github.com/gkpandian-sudo/krima_arts" },
       { icon: "📧", color: "bg-success/10 border-success/20",   title: "Gmail Cleanup", desc: "A Google Apps Script that bulk-marks all unread Gmail threads as read.", tags: ["JavaScript", "Google Apps Script"], segment: "Automation / Productivity", href: "https://github.com/gkpandian-sudo/gmail-cleanup-" },
       { icon: "👤", color: "bg-[#F59E0B]/10 border-[#F59E0B]/20", title: "Pandian",    desc: "Personal portfolio and profile showcase — a personal branding project.", tags: ["HTML", "Personal Project"], segment: "Portfolio", href: "https://github.com/gkpandian-sudo/pandian" },
+      { icon: "🍽️", color: "bg-[#f5921e]/10 border-[#f5921e]/20", title: "Murugan Mess", desc: "Heritage Chennai mess restaurant with direct online ordering — zero aggregator commission. Built as a live client demo for the F&B segment.", tags: ["HTML/CSS", "JavaScript", "Live Demo"], segment: "Food & Restaurant", href: "https://murugan-mess.netlify.app/menu", linkLabel: "Live Site →" },
     ],
   },
   faq: {

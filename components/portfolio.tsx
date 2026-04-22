@@ -99,7 +99,7 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                   className="text-xs text-primary hover:underline flex items-center gap-1 font-medium"
                 >
-                  GitHub →
+                  {project.linkLabel ?? "GitHub →"}
                 </a>
               </div>
             </motion.article>
